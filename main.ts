@@ -10,14 +10,8 @@ input.onButtonPressed(Button.B, function () {
 })
 let Pixel_Array = neopixel.create(DigitalPin.P0, 5, NeoPixelMode.RGB_RGB)
 Pixel_Array.setBrightness(1000)
+Pixel_Array.showRainbow(0, 255)
 led.setBrightness(255)
 basic.forever(function () {
-    Pixel_Array.showRainbow(0, 255)
-    basic.showLeds(`
-        # # # # #
-        # # # # #
-        # # # # #
-        # # # # #
-        # # # # #
-        `)
+	
 })

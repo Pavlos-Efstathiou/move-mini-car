@@ -7,7 +7,8 @@
         "microphone": "*",
         "servo": "*",
         "neopixel": "github:microsoft/pxt-neopixel#v0.7.3",
-        "pxt-kitronik-servo-lite": "github:kitronikltd/pxt-kitronik-servo-lite#v1.0.5"
+        "pxt-kitronik-servo-lite": "github:kitronikltd/pxt-kitronik-servo-lite#v1.0.5",
+        "ws2812b": "github:microsoft/pxt-ws2812b#v0.1.1"
     },
     "files": [
         "main.blocks",
