@@ -37,16 +37,14 @@ let Pixel_Array = neopixel.create(DigitalPin.P0, 5, NeoPixelMode.RGB_RGB)
 Pixel_Array.setBrightness(1000)
 Pixel_Array.showRainbow(0, 255)
 led.setBrightness(255)
-forwards(300)
-basic.pause(1000)
-basic.showIcon(IconNames.Heart)
-basic.pause(1000)
+left(90)
+forwards(0)
+right(90)
+forwards(0)
+// forwards(300)
+// basic.pause(1000)
+// basic.show_icon(IconNames.HEART)
+// basic.pause(1000)
 basic.forever(function () {
-    basic.showLeds(`
-        # # . # #
-        # # . # #
-        . . . . .
-        # . . . #
-        . # # # .
-        `)
+	
 })

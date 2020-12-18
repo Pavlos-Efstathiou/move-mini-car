@@ -36,10 +36,10 @@ Pixel_Array = neopixel.create(DigitalPin.P0, 5, NeoPixelMode.RGB_RGB)
 Pixel_Array.set_brightness(1000)
 Pixel_Array.show_rainbow(0, 255)
 led.set_brightness(255)
-forwards(300)
-basic.pause(1000)
-basic.show_icon(IconNames.HEART)
-basic.pause(1000)
+# forwards(300)
+# basic.pause(1000)
+# basic.show_icon(IconNames.HEART)
+# basic.pause(1000)
 
 def on_forever():
     basic.show_leds("""
