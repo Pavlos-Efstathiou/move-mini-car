@@ -20,6 +20,10 @@ function backwords (distance: number) {
         kitronik_servo_lite.driveBackwards(distance)
     }
 }
+input.onButtonPressed(Button.AB, function () {
+    kitronik_servo_lite.neutral()
+    kitronik_servo_lite.stop()
+})
 input.onButtonPressed(Button.B, function () {
     basic.showString("B")
     kitronik_servo_lite.setDistancePerSecond(200)
