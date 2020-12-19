@@ -6,7 +6,6 @@ def left(degrees: number):
 def on_button_pressed_a():
     basic.show_string("F")
     kitronik_servo_lite.set_distance_per_second(200)
-    left(90)
     forwards(0)
 input.on_button_pressed(Button.A, on_button_pressed_a)
 
@@ -41,11 +40,8 @@ Pixel_Array.set_brightness(99)
 Pixel_Array.show_rainbow(0, 255)
 led.set_brightness(255)
 kitronik_servo_lite.set_distance_per_second(200)
-# forwards(300)
-# basic.pause(1000)
-# basic.show_icon(IconNames.HEART)
-# basic.pause(1000)
+kitronik_servo_lite.set_degrees_per_second(180)
 
 def on_forever():
-    basic.show_string(control.device_name())
+    pass
 basic.forever(on_forever)

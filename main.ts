@@ -7,6 +7,7 @@ function left (degrees: number) {
 input.onButtonPressed(Button.A, function () {
     basic.showString("F")
     kitronik_servo_lite.setDistancePerSecond(200)
+    left(180)
     forwards(0)
 })
 input.onGesture(Gesture.FreeFall, function () {
@@ -36,10 +37,10 @@ function forwards (distance: number) {
     }
 }
 let Pixel_Array = neopixel.create(DigitalPin.P0, 5, NeoPixelMode.RGB_RGB)
-Pixel_Array.setBrightness(99)
+Pixel_Array.setBrightness(9999)
 Pixel_Array.showRainbow(0, 255)
 led.setBrightness(255)
 kitronik_servo_lite.setDistancePerSecond(200)
 basic.forever(function () {
-    basic.showString(control.deviceName())
+	
 })
