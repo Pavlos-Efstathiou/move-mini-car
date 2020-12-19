@@ -20,9 +20,14 @@ def backwords(distance: number):
     else:
         kitronik_servo_lite.drive_backwards(distance)
 
+def on_button_pressed_ab():
+    kitronik_servo_lite.neutral()
+    kitronik_servo_lite.stop()
+    basic.show_string("STOPPED!")
+input.on_button_pressed(Button.AB, on_button_pressed_ab)
+
 def on_button_pressed_b():
     basic.show_string("B")
-    kitronik_servo_lite.set_distance_per_second(200)
     backwords(0)
 input.on_button_pressed(Button.B, on_button_pressed_b)
 
@@ -31,22 +36,16 @@ def forwards(distance: number):
         kitronik_servo_lite.forward()
     else:
         kitronik_servo_lite.drive_forwards(distance)
-Brightness_Value = led.brightness()
 Pixel_Array = neopixel.create(DigitalPin.P0, 5, NeoPixelMode.RGB_RGB)
-Pixel_Array.set_brightness(1000)
+Pixel_Array.set_brightness(99)
 Pixel_Array.show_rainbow(0, 255)
 led.set_brightness(255)
+kitronik_servo_lite.set_distance_per_second(200)
 # forwards(300)
 # basic.pause(1000)
 # basic.show_icon(IconNames.HEART)
 # basic.pause(1000)
 
 def on_forever():
-    basic.show_leds("""
-        # # . # #
-        # # . # #
-        . . . . .
-        # . . . #
-        . # # # .
-        """)
+    basic.show_string(control.device_name())
 basic.forever(on_forever)
