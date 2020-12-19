@@ -37,7 +37,7 @@ function forwards (distance: number) {
     }
 }
 let Pixel_Array = neopixel.create(DigitalPin.P0, 5, NeoPixelMode.RGB_RGB)
-Pixel_Array.setBrightness(9999)
+Pixel_Array.setBrightness(99999999)
 Pixel_Array.showRainbow(0, 255)
 led.setBrightness(255)
 kitronik_servo_lite.setDistancePerSecond(200)
